@@ -1,9 +1,6 @@
-.idea
-Thumbs.db*
-.DS_Store*
-HELP.md
 dist
 doc
+.DS_Store*
 
 # Logs
 logs
@@ -85,4 +82,3 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
-node_modules

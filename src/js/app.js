@@ -1,23 +1,23 @@
 export default class Team {
-    constructor() {
-      this.members = new Set();
+  constructor() {
+    this.members = new Set();
+  }
+
+  add(character) {
+    if (!this.members.has(character)) {
+      this.members.add(character);
+    } else {
+      throw new Error('Персонаж уже в команде!');
     }
-  
-    add(character) {
-      if (this.members.has(character)) {
-        throw new Error('Персонаж уже существует в команде');
-      } else {
-        this.members.add(character);
-      }
-    }
-  
-    addAll(...characters) {
-      characters.forEach((item) => {
-        this.members.add(item);
-      });
-    }
-  
-    toArray() {
-      this.members = Array.from(this.members);
-    }
+  }
+
+  addAll(...allCharacter) {
+    allCharacter.forEach((character) => {
+      this.members.add(character);
+    });
+  }
+
+  toArray() {
+    return [...this.members];
+  }
 }
